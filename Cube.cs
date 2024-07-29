@@ -13,7 +13,7 @@ public class Cube : MonoBehaviour
     private MeshRenderer _meshRenderer;
 
     public event Action Splited;
-    public event Action<int, int> Explosion;
+    public event Action<int, int> Exploded;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class Cube : MonoBehaviour
         }
         else
         {
-            Explosion?.Invoke(_baseForce, _baseRadius);
+            Exploded?.Invoke(_baseForce, _baseRadius);
         }
 
         Destroy(gameObject);

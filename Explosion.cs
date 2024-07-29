@@ -8,12 +8,12 @@ public class Explosion : MonoBehaviour
 
     private void OnEnable()
     {
-        _cube.Explosion += BlowUp;
+        _cube.Exploded += BlowUp;
     }
 
     private void OnDisable()
     {
-        _cube.Explosion -= BlowUp;
+        _cube.Exploded -= BlowUp;
     }
 
     private void BlowUp(int force, int radius)
